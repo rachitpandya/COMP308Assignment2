@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Home</title>
+    <!--CSS Section-->
+    <link href="Content/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link href="css/mobile.css" rel="stylesheet" />
+</head>
+<body onload="init();">
+    <div data-role="page" data-control-title="Home" id="page1">
+        <div data-theme="a" data-role="header">
+            <span class="ui-title">
+            </span>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <img src="assets/images/logodesign.png" alt="image" data-controltype="image">
+                </div>
+                <div class="ui-block-b">
+                    <h3>
+                        Welcome to Rachit's Website!
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div data-role="content">
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li>
+                        <a href="#page1" data-transition="flow" data-theme="" data-icon="home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page5" data-transition="slide" data-theme="" data-icon="info">
+                            About Me
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#page6" data-transition="slide" data-theme="" data-icon="alert">
+                            Contact Me
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a data-role="button" href="#page1">
+                        Projects
+                    </a>
+                </div>
+                <div class="ui-block-b">
+                    <a data-role="button" href="#page1">
+                        Services
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <h1>
+                © CopyRights 2015 | Rachit Pandya
+            </h1>
+        </div>
+    </div>
+    <!--Javascript Section-->
+    <script src="Scripts/jquery-1.8.0.min.js"></script>
+    <script src="Scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script src="Scripts/mobile.js"></script>
+</body>
+</html>
