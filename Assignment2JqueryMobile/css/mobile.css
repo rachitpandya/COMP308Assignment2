@@ -1,2 +1,68 @@
 ﻿body {
+        
+        background: url(../assets/images/background.jpg) repeat;
+        color: #3e0a0a;
+        
+}
+
+.circular {
+	width: 200px;
+	height: 200px;
+	border-radius: 150px;
+	background: url(../assets/images/myimg.jpg) no-repeat;
+    background-size:cover;
+	}
+
+.circular img {
+	opacity: 0;
+	filter: alpha(opacity=0);
+    height:300px;
+    width:300px;
+	}
+
+#subintro {
+    
+    font-family:Calibri;
+    color:red;
+    font-style:italic;
+}
+
+#homesp1 {
+    font-size: large; 
+    font-family: 'comic sans ms', sans-serif; 
+    color: rgb(255, 0, 0);
+}
+.p{
+text-align: justify;
+font-size:medium;
+}
+#headerblock {
+height:65px;
+margin-top:5px;
+}
+
+#imgsize {
+    height:55px;
+    width:50px;
+    position:absolute; 
+    align-self:center;
+    margin-left:30px;
+
+}
+
+#btnsmall {
+    height:10px;
+    width:10px;
+    margin-right:20px;   
+}
+#btnsmall1 {
+    height:30px;
+    width:30px;
+    position:center;
+    margin-top:-10px;
+    margin-left:-10px; 
+}
+#imgsetting {
+width:200px;
+height:300px;
 }

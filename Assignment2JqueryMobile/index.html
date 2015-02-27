@@ -6,21 +6,19 @@
     <title>Home</title>
     <!--CSS Section-->
     <link href="Content/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link href="css/a.css" rel="stylesheet" />
     <link href="css/mobile.css" rel="stylesheet" />
 </head>
 <body onload="init();">
     <div data-role="page" data-control-title="Home" id="page1">
-        <div data-theme="a" data-role="header">
-            <span class="ui-title">
-            </span>
+        <div data-theme="a" data-role="header" >
+
             <div class="ui-grid-a">
                 <div class="ui-block-a">
-                    <img src="assets/images/logodesign.png" alt="image" data-controltype="image">
+                    <img src="assets/images/logodesign.png" alt="image" data-controltype="image" id="imgsize">
                 </div>
                 <div class="ui-block-b">
-                    <h3>
-                        Welcome to Rachit's Website!
-                    </h3>
+                    Welcome to Rachit's Website!
                 </div>
             </div>
         </div>
@@ -28,17 +26,17 @@
             <div data-role="navbar" data-iconpos="top">
                 <ul>
                     <li>
-                        <a href="#page1" data-transition="flow" data-theme="" data-icon="home">
+                        <a href="index.html" class="ui-btn-active" data-transition="flow" data-theme="" data-icon="home">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#page5" data-transition="slide" data-theme="" data-icon="info">
+                        <a href="AboutMe.html" data-transition="slide" data-theme="" data-icon="info">
                             About Me
                         </a>
                     </li>
                     <li>
-                        <a href="#page6" data-transition="slide" data-theme="" data-icon="alert">
+                        <a href="ContactMe.html" data-transition="slide" data-theme="" data-icon="alert">
                             Contact Me
                         </a>
                     </li>
@@ -46,26 +44,116 @@
             </div>
             <div class="ui-grid-a">
                 <div class="ui-block-a">
-                    <a data-role="button" href="#page1">
+                    <a data-role="button" href="Proj.html"><img class="ui-alt-icon" src="assets/images/Developer .png" style="height:25px; width:25px;" />
                         Projects
                     </a>
                 </div>
                 <div class="ui-block-b">
-                    <a data-role="button" href="#page1">
+                    <a data-role="button" href="serv.html">
+                        <img class="ui-alt-icon" src="assets/images/Downloads.png" style="height:25px; width:25px;" />
                         Services
                     </a>
                 </div>
             </div>
         </div>
-        <div data-theme="a" data-role="footer" data-position="fixed">
-            <h1>
-                © CopyRights 2015 | Rachit Pandya
-            </h1>
+
+        <div data-role="content">
+
+            <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
+                <!-- Slides Container -->
+                <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
+                    <div><img u="image" src="assets/images/CHireportal.jpg" /></div>
+                        <div><img u="image" src="assets/images/tnp1.jpg" /></div>
+                        <div><img u="image" src="assets/images/PnL.jpg" /></div>
+</div>
+                <!-- Trigger -->
+                <script>jssor_slider1_starter('slider1_container');</script>
+            </div>
+
         </div>
-    </div>
+            <div data-role="content">
+                <div data-controltype="textblock">
+                    <p>
+                        <span id="homesp1">
+                            Where ideas becomes reality
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            Welcome to my website where you can see my works. and suggest me some
+                            of your innovative ideas.I am very&nbsp;
+                        </span>
+                        <span>
+                            excited to show you my works the project that i have done. you can surf
+                            my website and see my work. I am very happy to bring soul to my work.
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            Hope this will give you some of idea about my knowledge and passion about
+                            my work. You can contact me or submit your suggestion. And I am very happy
+                            to hear from you.
+                        </span>
+                        <br>
+                        <span>
+                            Please find the contact detail from menu.
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <br>
+                        </span>
+                    </p>
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <div data-theme="a" data-role="footer" data-position="fixed">
+                <h1>
+                    © CopyRights 2015 | Rachit Pandya
+                </h1>
+            </div>
+        <div>
+            <a style="text-align:center;" href="http://studentweb.cencol.ca/rpandy10/index.html">Full Site</a>
+        </div>
+        </div>
     <!--Javascript Section-->
     <script src="Scripts/jquery-1.8.0.min.js"></script>
     <script src="Scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/jssor.slider.min.js"></script>
+    <script>
+    jQuery(document).ready(function ($) {
+        var options = { $AutoPlay: true };
+        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+
+        //responsive code begin
+        //you can remove responsive code if you don't want the slider scales
+        //while window resizes
+        function ScaleSlider() {
+            var parentWidth = $('#slider1_container').parent().width();
+            if (parentWidth) {
+                jssor_slider1.$ScaleWidth(parentWidth);
+            }
+            else
+                window.setTimeout(ScaleSlider, 30);
+        }
+        //Scale slider after document ready
+        ScaleSlider();
+
+        //Scale slider while window load/resize/orientationchange.
+        $(window).bind("load", ScaleSlider);
+        $(window).bind("resize", ScaleSlider);
+        $(window).bind("orientationchange", ScaleSlider);
+        //responsive code end
+    });
+    </script>
+
     <script src="Scripts/mobile.js"></script>
 </body>
 </html>
