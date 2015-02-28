@@ -65,7 +65,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AboutMe.html" />
     <Content Include="assets\images\background.jpg" />
     <Content Include="assets\images\CHireportal.jpg" />
     <Content Include="assets\images\chp1.jpg" />
